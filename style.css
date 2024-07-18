@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .inter-regular {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -8,16 +14,14 @@
     font-style: normal;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
     background-color: black;
 }
 
+section {
+    margin: 5rem 0;
+}
 /* Shared Style */
 
 .max-width {
@@ -31,7 +35,7 @@ body {
 
 h1 {
     color: #ffffff;
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 900;
     margin: 0;
 }
@@ -40,7 +44,14 @@ h2 {
     color: #ffffff;
     font-size: 3rem;
     font-weight: 900;
-    margin: 0;
+    margin: 5px 0;
+}
+
+h5 {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 5px;
 }
 
 p {
@@ -52,12 +63,12 @@ p {
 
 strong {
     color: #ffffff;
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 0;
 }
 
 .btn {
-    padding: 15px 35px;
+    padding: 15px 40px;
     color: white;
     border-radius: 100px;
     background: #dc4e38;
@@ -102,6 +113,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 30px 0;
+    backdrop-filter: blur(10px);
+    
 }
 
 .menu-item {
@@ -115,13 +128,14 @@ nav {
 /* Banner Style start */
 
 .banner-container {
-    border: 1px solid yellow;
+    height: 38rem;
+    align-items: center;
 }
 
 .banner-right {
     position: relative;
-    border: 1px solid red;
     width: 50%;
+    height: 100%;
     background-image: url("./images/Images-2.png");
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -129,12 +143,12 @@ nav {
 
 .banner-right .card {
     align-items: center;
-    /* gap: 10px; */
     justify-content: center;
     width: 200px;
     height: 100px;
     backdrop-filter: blur(10px);
-    box-shadow: ;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.278);
 }
 
 .banner-right .card img {
@@ -146,21 +160,22 @@ nav {
 .banner-right .cart-top {
     flex-direction: column;
     position: absolute;
-    top: 120px;
-    right: -30px;
+    top: 30%;
+    right: -15%;
 }
+
 
 .banner-right .card-bottom {
     position: absolute;
     bottom: 15%;
-    left: -2rem;
+    left: 20%;
 }
 
 .banner-left {
-    width: 50;
+    width: 50%;
     flex-direction: column;
     gap: 2rem;
-    padding: 10rem 0;
+    padding: 0;
 }
 
 .banner-left span {
@@ -172,4 +187,67 @@ nav {
 
 .banner-btn {
     gap: 1rem;
+}
+
+/* Banner Style End */
+
+
+/* Change Habit style start  */
+
+.change-habit {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+
+.habit-text {
+    text-align: center;
+}
+
+.habit-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.habit-card img {
+    border-radius: 100%;
+    border: 1px solid #ffffff;
+    padding: 2px;
+}
+.habit-card {
+    text-align: center;
+}
+
+/* Run extra style */
+
+.run-extra-container {
+    justify-content: space-between;
+    padding: 2.5rem;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.run-extra-text {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.run-extra-img {
+    background-image: url('./images/run.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    width: 30%;
+}
+
+
+/* Footer Style  */
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 50% repeat(2, 25%);
+    gap: 2rem;
 }
