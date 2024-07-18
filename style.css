@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap');
 
 .inter-regular {
     font-family: "Inter", sans-serif;
@@ -11,7 +12,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #000000;
+}
+
+body {
+    background-color: black;
 }
 
 /* Shared Style */
@@ -20,28 +24,46 @@
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .flex {
     display: flex;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: 900;
+    margin: 0;
 }
 
 h2 {
     color: #ffffff;
     font-size: 3rem;
     font-weight: 900;
+    margin: 0;
 }
 
 p {
     color: rgba(255, 255, 255, 0.6);
     font-size: 1rem;
     font-weight: 400;
+    margin: 0;
+}
+
+strong {
+    color: #ffffff;
+    font-size: 2rem;
+    margin: 0;
 }
 
 .btn {
     padding: 15px 35px;
     color: white;
     border-radius: 100px;
-    background: #e6533c;
+    background: #dc4e38;
     border: none;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 a {
@@ -50,7 +72,7 @@ a {
 
 /* Navbar Style */
 header {
-    background: linear-gradient(180.00deg, rgb(17, 17, 17),rgba(119, 119, 119, 0) 100%);
+    background: linear-gradient(180.00deg, rgb(17, 17, 17), rgba(119, 119, 119, 0) 100%);
 }
 
 .menu ul {
@@ -70,6 +92,7 @@ header {
     padding: 5px 15px;
     border-radius: 50px;
 }
+
 .menu-item a {
     color: white;
     background-color: transparent;
@@ -80,8 +103,73 @@ nav {
     align-items: center;
     padding: 30px 0;
 }
+
 .menu-item {
     border: 1px solid white;
     border-radius: 50px;
     padding: 5px;
+}
+
+/* End Navber Style  */
+
+/* Banner Style start */
+
+.banner-container {
+    border: 1px solid yellow;
+}
+
+.banner-right {
+    position: relative;
+    border: 1px solid red;
+    width: 50%;
+    background-image: url("./images/Images-2.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+.banner-right .card {
+    align-items: center;
+    /* gap: 10px; */
+    justify-content: center;
+    width: 200px;
+    height: 100px;
+    backdrop-filter: blur(10px);
+    box-shadow: ;
+}
+
+.banner-right .card img {
+    width: 20%;
+    height: auto;
+    margin-right: 10px;
+}
+
+.banner-right .cart-top {
+    flex-direction: column;
+    position: absolute;
+    top: 120px;
+    right: -30px;
+}
+
+.banner-right .card-bottom {
+    position: absolute;
+    bottom: 15%;
+    left: -2rem;
+}
+
+.banner-left {
+    width: 50;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 10rem 0;
+}
+
+.banner-left span {
+    font-family: "MonteCarlo", cursive;
+    font-weight: 300;
+    font-size: 6rem;
+    line-height: 0;
+}
+
+.banner-btn {
+    gap: 1rem;
 }
