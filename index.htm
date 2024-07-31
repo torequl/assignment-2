@@ -12,7 +12,7 @@
     <header class="header">
         <nav class="max-width flex">
             <div class="site-logo">
-                <h3 style="color:#f1543c; font-style: italic; font-size: 2rem;">Fitness</h3>
+                <h3 style="color: var(--btn-bg); font-style: italic; font-size: 2rem;">Fitness</h3>
             </div>
             <div class="menu">
                 <ul class="menu-item flex">
@@ -31,12 +31,13 @@
                     you get fit and stay fit!</p>
                 <div class="banner-btn flex">
                 <a href="#" class="btn">Join Club Now</a>
-                <a href="#" class="btn">Download Now</a>
+                <a href="#" class="btn btn-2">Download Now</a>
                 </div>
             </div>
 
             <div class="banner-right">
-                <div class="card flex cart-top">
+                <img src="./images/Images-2.png" alt="">
+                <div class="card card-top flex">
                     <strong>250+</strong>
                     <p>Video tutorial</p>
                 </div>
@@ -88,21 +89,125 @@
                 <div class="run-extra-text">
                     <h2>Run an Extra <br> Mile Easily</h2>
                     <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym. With hundreds of professional workouts.</p>
-                    <a href="#" class="btn">Join Now</a>
+                    <a href="#" class="btn btn-padding">Join Now</a>
                 </div>
-                <div class="run-extra-img">
+                <div class="run-extra-img" style="background-image: url('./images/run.jpg');">
                     <span></span>
                 </div>
             </div>
         </section>
 
         <section>
-            <div class="meet-out-team">
+            <div class="ibm-heading max-width">
+                <h2>BMI Calculator</h2>
+                <p>We believe fitness should be accessible to 
+                    everyone, everywhere, regardless of income or 
+                    access to a gym.</p>
+            </div>
+            <div class="ibm-container">
+                <div class="ibm-calculator-container max-width flex">
+                    <div class="ibm-table">
+                        <h4>BMI Calculator Chart</h4>
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <td>BMI</td>
+                                    <td>Weight Status</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Below 18.5</td>
+                                    <td>Underweight</td>
+                                </tr>
+                                <tr>
+                                    <td>18.5 24.9</td>
+                                    <td>Healthy</td>
+                                </tr>
+                                <tr>
+                                    <td>25.0 29.9</td>
+                                    <td>Overweight</td>
+                                </tr>
+                                <tr>
+                                    <td>30.0 and Above</td>
+                                    <td>Obese</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+    
+                    <div class="ibm-calculator">
+                       <h4>Calculate your BMI</h4>
+                       <p>We believe fitness should be accessible to 
+                        everyone, everywhere, regardless of income or 
+                        access to a gym</p>
+    
+                        <form action="">
+                            <input type="text" name="" id="" placeholder="Height/cm">
+                            <input type="text" name="" id="" placeholder="Weight/kg">
+                            <input type="number" name="" id="" placeholder="Age">
+                            <select name="" id="sex">
+                                <option value="">Sex</option>
+                                <option value="">Male</option>
+                                <option value="">Female</option>
+                            </select>
+                            <select name="" id="activity">
+                                <option value="">Select an activity factor</option>
+                                <option value="">Male</option>
+                                <option value="">Female</option>
+                            </select>
+                            <button type="submit" class="btn btn-padding">Calculate</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="meet-our-team max-width">
+                <div class="team-header">
                 <h2>Meet Our Team</h2>
                 <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym.</p>
+                </div>
 
                 <div class="people-container">
-
+                    <div class="people" style="background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 100%), url('./images/trainer1.png');">
+                        <div class="text">
+                        <h4>Name 1</h4>
+                        <p>Trainer 1</p>
+                        </div>
+                    </div>
+                    <div class="people" style="background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 100%), url('./images/trainer2.png');">
+                        <div class="text">
+                            <h4>Name 1</h4>
+                            <p>Trainer 1</p>
+                        </div>
+                    </div>
+                    <div class="people" style="background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 100%), url('./images/trainer3.png');">
+                        <div class="text">
+                            <h4>Name 1</h4>
+                            <p>Trainer 1</p>
+                        </div>
+                    </div>
+                    <div class="people" style="background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 100%), url('./images/trainer4.png');">
+                        <div class="text">
+                            <h4>Name 1</h4>
+                            <p>Trainer 1</p>
+                        </div>
+                    </div>
+                    <div class="people" style="background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 100%), url('./images/trainer5.png');">
+                        <div class="text">
+                            <h4>Name 1</h4>
+                            <p>Trainer 1</p>
+                        </div>
+                    </div>
+                    <div class="people" style="background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 100%), url('./images/trainer6.png');">
+                        <div class="text">
+                            <h4>Name 1</h4>
+                            <p>Trainer 1</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -111,11 +216,11 @@
     <footer>
         <div class="footer-container max-width">
             <div class="left">
-                <h3 style="color:#f1543c; font-style: italic; font-size: 2.5rem;">Fitness</h3>
+                <h3 style="color: var(--btn-bg); font-style: italic; font-size: 2.5rem;">Fitness</h3>
                 <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym. With hundreds of professional workouts.</p>
             </div>
 
-            <div class="mid">
+            <div class="footer-menu">
                 <h4>Get Started</h4>
                 <ul>
                     <li><a href="#">Service</a></li>
@@ -125,7 +230,7 @@
                 </ul>
             </div>
 
-            <div class="rignt">
+            <div class="footer-menu">
                 <h4>Get Started</h4>
                 <ul>
                     <li><a href="#">Service</a></li>

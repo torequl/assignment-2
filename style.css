@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap'); */
 
 * {
     margin: 0;
@@ -14,6 +14,11 @@
     font-style: normal;
 }
 
+:root {
+    --primary-color: rgb(255, 255, 255);
+    --secondary-color: rgba(255, 255, 255, 0.5);
+    --btn-bg: rgb(230, 50, 30);
+}
 
 body {
     background-color: black;
@@ -22,6 +27,7 @@ body {
 section {
     margin: 5rem 0;
 }
+
 /* Shared Style */
 
 .max-width {
@@ -34,47 +40,59 @@ section {
 }
 
 h1 {
-    color: #ffffff;
+    color: var(--primary-color);
     font-size: 4.5rem;
     font-weight: 900;
     margin: 0;
 }
 
 h2 {
-    color: #ffffff;
+    color: var(--primary-color);
     font-size: 3rem;
     font-weight: 900;
     margin: 5px 0;
 }
 
+h4 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
 h5 {
-    color: #ffffff;
-    font-size: 1rem;
+    color: var(--primary-color);
+    font-size: 1.2rem;
     font-weight: 600;
     padding: 5px;
 }
 
+
 p {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--secondary-color);
     font-size: 1rem;
     font-weight: 400;
     margin: 0;
 }
 
 strong {
-    color: #ffffff;
+    color: var(--primary-color);
     font-size: 1.8rem;
     margin: 0;
 }
 
 .btn {
-    padding: 15px 40px;
-    color: white;
+    padding: 1rem 3rem;
+    color: var(--primary-color);
     border-radius: 100px;
-    background: #dc4e38;
+    background: var(--btn-bg);
     border: none;
     font-size: 1rem;
     font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-padding {
+    padding: 1rem 4rem;
 }
 
 a {
@@ -99,13 +117,13 @@ header {
 }
 
 .home-menu {
-    background-color: #e6533c;
+    background-color: var(--btn-bg);
     padding: 5px 15px;
     border-radius: 50px;
 }
 
 .menu-item a {
-    color: white;
+    color: var(--primary-color);
     background-color: transparent;
 }
 
@@ -114,31 +132,32 @@ nav {
     align-items: center;
     padding: 30px 0;
     backdrop-filter: blur(10px);
-    
+
 }
 
 .menu-item {
-    border: 1px solid white;
+    border: 1px solid var(--primary-color);
     border-radius: 50px;
     padding: 5px;
 }
 
-/* End Navber Style  */
+/* End Navbar Style  */
 
 /* Banner Style start */
 
 .banner-container {
-    height: 38rem;
     align-items: center;
+    justify-content: space-between;
+}
+
+.btn-2 {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
 }
 
 .banner-right {
     position: relative;
-    width: 50%;
-    height: 100%;
-    background-image: url("./images/Images-2.png");
-    background-repeat: no-repeat;
-    background-position: right bottom;
+    text-align: center;
 }
 
 .banner-right .card {
@@ -151,24 +170,28 @@ nav {
     border: 1px solid rgba(255, 255, 255, 0.278);
 }
 
+
 .banner-right .card img {
     width: 20%;
     height: auto;
     margin-right: 10px;
 }
 
-.banner-right .cart-top {
+.banner-right .card-top {
     flex-direction: column;
     position: absolute;
-    top: 30%;
+    top: 20%;
     right: -15%;
 }
 
 
 .banner-right .card-bottom {
     position: absolute;
-    bottom: 15%;
-    left: 20%;
+    bottom: 10%;
+    left: -35%;
+}
+.banner-right .card-bottom .text {
+    text-align: left;
 }
 
 .banner-left {
@@ -197,7 +220,7 @@ nav {
 .change-habit {
     flex-direction: column;
     align-items: center;
-    gap: 5rem;
+    gap: 2rem;
 }
 
 .habit-text {
@@ -211,9 +234,10 @@ nav {
 
 .habit-card img {
     border-radius: 100%;
-    border: 1px solid #ffffff;
+    border: 1px solid var(--primary-color);
     padding: 2px;
 }
+
 .habit-card {
     text-align: center;
 }
@@ -222,6 +246,7 @@ nav {
 
 .run-extra-container {
     justify-content: space-between;
+    gap: 1rem;
     padding: 2.5rem;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.2);
@@ -236,18 +261,252 @@ nav {
 }
 
 .run-extra-img {
-    background-image: url('./images/run.jpg');
+    border-radius: 0.5rem;
+    height: auto;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-position: right;
     background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    width: 30%;
+}
+
+/* IBM Calculator */
+
+.ibm-heading, .team-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.ibm-container {
+    background-color: rgba(225, 225, 225, 0.2);
+}
+
+.ibm-calculator-container {
+    padding: 3rem 2rem;
+    gap: 4rem;
+    justify-content: space-between;
+}
+
+.ibm-table, .ibm-calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.2rem;
+    width: 50%;
+}
+table {
+    border: 1px solid var(--secondary-color);
+    border-collapse: collapse;
+}
+
+thead {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+tbody {
+    color: var(--secondary-color);
+}
+
+td {
+    padding: 10px 20px;
+}
+
+form {
+    display: inline;
+}
+
+input, select {
+    margin-bottom: 8px;
+    margin-right: 5px;
+    border: none;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    background-color: rgba(255, 255, 255, 0.22);
+    outline: none;
+}
+
+input, #sex {
+    width: calc(50% - 8px);
+}
+#activity{
+    width: 99%;
 }
 
 
-/* Footer Style  */
+/*  */
+
+
+
+
+
+/* Meet Our Team Style */
+
+.people-container {
+    padding: 2rem;
+    background-color: rgba(225, 225, 225, 0.2);
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.people {
+    position: relative;
+    border-radius: 0.5rem;
+    height: 300px;
+    width: auto;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.people .text {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+/* Footer start  */
 
 .footer-container {
+    padding: 2rem 0;
     display: grid;
-    grid-template-columns: 50% repeat(2, 25%);
+    grid-template-columns: 30% repeat(2, 20%);
+    justify-content: space-between;
     gap: 2rem;
+}
+
+.footer-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.footer-menu h4 {
+    padding: 15px 0;
+}
+
+.footer-menu ul a {
+    color: var(--secondary-color);
+}
+
+/* Footer End */
+
+
+
+
+/* Responsive Mobile Device 576px */
+
+@media screen and (max-width: 576px) {
+
+    .run-extra-container, .people-container {
+        border-radius: 0;
+    }
+    .menu {
+        display: none;
+    }
+
+    .banner-container, .run-extra-container {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 900;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 800;
+    }
+
+    
+    strong {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .btn {
+        padding: 1rem 2rem;
+        font-size: .8rem;
+        font-weight: 600;
+    }
+
+    .btn-padding {
+        padding: 1rem 3rem;
+    }
+
+    .banner-btn {
+        justify-content: center;
+    }
+
+    .banner-left span{
+        line-height: 3rem;
+    }
+
+    .banner-left,
+    .banner-right,
+    .ibm-calculator,
+    .ibm-table {
+        width: 90%;
+    }
+
+    .banner-right img {
+        max-width: 70%;
+    }
+
+    .banner-right .card-bottom {
+        width: 160px;
+        height: 90px;
+        left: 0;
+        bottom: 5%;
+    }
+
+    .banner-right .card-top{
+        width: 160px;
+        height: 90px;
+        right: 0;
+        top: 10%;
+    }
+    .habit-card-container {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 1rem;
+    }
+
+    .run-extra-text,
+    .run-extra-img {
+        width: 98%;
+    }
+
+    .run-extra-img {
+        height: 15rem;
+    }
+
+    .ibm-calculator-container {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .people-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
