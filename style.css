@@ -39,6 +39,10 @@ section {
     display: flex;
 }
 
+.color-white {
+    color: white;
+}
+
 h1 {
     color: var(--primary-color);
     font-size: 4.5rem;
@@ -69,7 +73,7 @@ h5 {
 
 p {
     color: var(--secondary-color);
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 400;
     margin: 0;
 }
@@ -273,6 +277,83 @@ nav {
     background-size: cover;
 }
 
+/* About our gym */
+
+.about-our-gym {
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-our-gym .image {
+    position: relative;
+    width: 100%;
+}
+.about-our-gym img {
+    border-radius: 1rem;
+    max-width: 100%;
+    height: 100%;
+}
+
+.about-our-gym .image .card {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    background-color: white;
+    display: inline-block;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.about-our-gym .image .card p {
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.about-our-gym .image .card .icon {
+    align-items: center;
+    justify-content: start;
+}
+.about-our-gym .image .card .icon span {
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+
+.fa-user {
+    background-color: var(--btn-bg);
+    border-radius: 0.5rem;
+    color: white;
+    padding: 1rem;
+    margin-right: 1rem;
+}
+.about-our-gym .tex-content p {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+.about-our-gym .tex-content {
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.about-our-gym .tex-content .icon-box {
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.fa-circle-check {
+    margin-right: 0.5rem;
+    font-size: 1.6rem;
+    color: var(--btn-bg);
+}
+
+.fa-arrow-right {
+    margin-left: 1rem;
+}
+
+
+
 /* IBM Calculator */
 
 .ibm-heading, .team-header {
@@ -418,6 +499,10 @@ input, #sex {
 
 @media screen and (max-width: 576px) {
 
+    .p-m {
+        padding: 0 0.8rem;
+    }
+
     .hambarger-menu {
         display: block;
     }
@@ -440,7 +525,10 @@ input, #sex {
         display: none;
     }
 
-    .banner-container, .run-extra-container {
+    .banner-container, 
+    .run-extra-container,
+    .about-our-gym,
+    .about-our-gym .tex-content .icon-box {
         flex-direction: column;
     }
 
@@ -466,9 +554,26 @@ input, #sex {
         font-weight: 600;
     }
 
-    .btn-padding {
+    .btn-m {
         padding: 1rem 3rem;
+        text-align: center;
+        font-size: 1rem;
     }
+
+    .btn-padding {
+        padding: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-our-gym .image .card {
+        padding: 1rem;     
+        right: 15%;   
+    }
+    .about-our-gym .image .card p{
+        font-size: 1rem;
+    }
+
 
     .banner-btn {
         justify-content: center;
@@ -482,7 +587,7 @@ input, #sex {
     .banner-right,
     .ibm-calculator,
     .ibm-table {
-        width: 90%;
+        width: 99%;
     }
 
     .banner-right img {
@@ -518,6 +623,9 @@ input, #sex {
         width: 98%;
     }
 
+    .about-our-gym {
+        padding: 0 1rem;
+    }
     .run-extra-img {
         height: 15rem;
     }
@@ -525,6 +633,9 @@ input, #sex {
     .ibm-calculator-container {
         flex-direction: column;
         padding: 2rem 1rem;
+    }
+    .about-our-gym .tex-content p {
+        font-size: 1rem;
     }
 
     .people-container {
